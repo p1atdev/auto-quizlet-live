@@ -161,6 +161,12 @@ async function doLive(key, userName, headless = true, swapMode = false) {
 }
 
 // 外部用
+/**
+ * ライブに参加する
+ * @param { string } key 参加コード 999-999 みたいなやつのハイフンいらない版
+ * @param { string } userName 表示される名前
+ * @param { bool } headless trueならブラウザを表示しない
+ */
 module.exports.doLive = async (key, userName, headless = true) => {
     await doLive(key, userName, headless)
 }
