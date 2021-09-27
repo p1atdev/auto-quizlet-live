@@ -24,6 +24,7 @@ async function login(username, password, page) {
 async function doLive(key, userName, headless = true, swapMode = false) {
     console.log("start doLive")
 
+    // 広告ブロッカーはいらないかも
     // const AdblockerPlugin = require("puppeteer-extra-plugin-adblocker")
     // puppeteer.use(
     //     AdblockerPlugin({
@@ -137,7 +138,7 @@ async function doLive(key, userName, headless = true, swapMode = false) {
             }
         }
 
-        console.log("〜終了〜")
+        console.log("〜ゲーム終了〜")
 
         // スクショを保存するぜ
         await page.waitForTimeout(10000)
@@ -156,8 +157,6 @@ async function doLive(key, userName, headless = true, swapMode = false) {
         await browser.close()
 
         console.log("終了")
-
-        // return [progress, errorMessage]
     }
 }
 
